@@ -78,13 +78,13 @@ jupyter notebook notebooks/qdii_gold_analysis.ipynb
 ## 🧪 实时估值计算逻辑
 
 ```python
-# 黄金总涨幅（T-2 → 当前）
+# Gold total return (T-2 → current)
 gold_return_total = (gold_now - gold_t2) / gold_t2
 
-# 基金实时估值 = T-2净值 × (1 + 黄金总涨幅)
+# Fund real-time estimated value = T-2 NAV × (1 + total gold return)
 estimated_nav_now = nav_t2 * (1 + gold_return_total)
 
-# 溢价率 = (市场现价 - 估算净值) / 估算净值
+# Premium rate = (current market price - estimated NAV) / estimated NAV
 premium = (price_now - estimated_nav_now) / estimated_nav_now
 ```
 
