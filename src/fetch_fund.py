@@ -27,7 +27,7 @@ class FundDataFetcher:
             response.raise_for_status()
             
             # Try to get the data via API endpoint
-            api_url = "https://www.jisilu.cn/data/qdii/qdii_list/"
+            api_url = "https://www.jisilu.cn/data/qdii/qdii_list/C/"
             
             # Parameters for filtering gold funds
             params = {
